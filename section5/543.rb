@@ -5,3 +5,6 @@
 
 buy_burger('cheese', drink: true, potato: true)
 buy_burger('fish', drink: true, potato: false)
+
+# キーワード引数は呼び出し時に入れ替え可能
+buy_burger('fish', potato: false, drink: true)
