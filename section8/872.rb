@@ -25,6 +25,7 @@ p product.title
 # p product.log 'hello'
 
 module Loggable
+  # ここから下のメソッドは全てモジュール関数
   module_function
 
   def log(text)
