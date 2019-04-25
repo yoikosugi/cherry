@@ -50,7 +50,7 @@ def greeting
   # 2個の引数をブロックに渡す
   text = yield 'こんにちは', 12345
   puts text
-  puts 'こんにちは'
+  puts 'こんばんは'
 end
 
 greeting do |text|
@@ -58,4 +58,17 @@ greeting do |text|
   text * 2
 end
 
+p '-----------------------------------------'
 
+def greeting
+  puts 'おはよう'
+  # 1個の引数をブロックに渡す
+  text = yield 'こんにちは'
+  puts text
+  puts 'こんばんは'
+end
+
+greeting do |text, other|
+  # ブロック引数が2つであれば、2つめの引数はnilになる
+  text * 2 + other.inspect
+end
